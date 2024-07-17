@@ -24,7 +24,7 @@
 .product-card {
   position: relative;
   box-shadow: 0 2px 7px #dfdfdf; 
-  min-height: 420px ;
+ 
   background: white;
   margin: 0px auto;
   padding: 10px;
@@ -79,7 +79,7 @@
  
   color: #1523c1;
   font-weight: 600;
-  width: 50%;
+  width: 65%;
   float: left;
 }
 
@@ -179,11 +179,6 @@
 
 @media only screen and (max-width: 500px) {
 
- #card-container{
- 
- }
-
- 
 
  .product-catagory {
 
@@ -199,13 +194,17 @@
     height: 200px;
   }
 
-  .product-card {
-   
-    min-height: 400px;
-   
+  .product-price {
+    
+    font-weight: 500;
+    
+    float: left;
+  }
 }
+   
+
   
-}
+
 
 @media only screen and (max-width: 413px) {
 
