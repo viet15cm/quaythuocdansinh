@@ -179,7 +179,31 @@
 
 @media only screen and (max-width: 500px) {
 
+ #card-container{
  
+ }
+
+ 
+
+ .product-catagory {
+
+    font-size: 10px;
+    
+    margin-bottom: 5px;
+    margin-top: 5px;
+   
+  }
+
+  .product-tumb img {
+   
+    height: 200px;
+  }
+
+  .product-card {
+   
+    min-height: 400px;
+   
+}
   
 }
 
