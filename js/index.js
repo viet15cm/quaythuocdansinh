@@ -12,6 +12,8 @@ if (window.pageYOffset >= sticky) {
     } 
     else {
     navbar.classList.remove("sticky");
-    
+    mainhtm.classList.remove("magin");
   }
 }
+
+
