@@ -317,7 +317,7 @@
             <div class="product-card">
                 <div class="badge-hot">Hot</div>             
                 <div class="product-tumb">
-                        <a href="https://nhathuocgo.com/san-pham/sua-rua-mat-acnes-ngua-mun-creamy-wash-100g">
+                        <a href="/detail.html">
                             <img loading="lazy" src="https://nhathuocgo.com/ImageManager/ProductImg/240740085_62bf3699.png" alt="Sữa rửa mặt ngừa mụn Acnes Creamy Wash 100g">
                         </a>
                 </div>
@@ -502,9 +502,11 @@
 
 
 
+
   <!-- Main modal search -->
   <div id="default-modal-search" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-      <div class="relative p-4 w-full max-w-2xl max-h-full">
+      
+    <div class="relative p-4 w-full max-w-2xl max-h-full">
           <!-- Modal content -->
           <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
               <!-- Modal header -->
@@ -518,29 +520,17 @@
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
                             </svg>
                         </div>
-                        <input type="search" id="default-search" class=" block w-full p-4 ps-10 text-sm text-gray-900  border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search Mockups, Logos..." required />
+                        <input type="text" id="searchInput" class=" block w-full p-4 ps-10 text-sm text-gray-900  border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search Mockups, Logos..." required />
                         
                     </div>
                 </form>
-                
-                  
+
               </div>
               <!-- Modal body -->
-              <div class="p-4 md:p-5 space-y-4">
+              <div id="autocompleteList" class="p-4 md:p-5 space-y-4 autocomplete-items">
 
               
-                  <ul>
-                    <li>
-                        Thuốc cảm
-                    </li>
-                    <li>
-                        Hổ trợ tình dục
-                    </li>
-                    
-                  
-                  </ul>
-
-                  
+                 
               </div>
               <!-- Modal footer -->
               <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Container for autocomplete */
+                .autocomplete-container {
+                    position: relative;
+                    display: inline-block;
+                    width: 100%;
+                    max-width: 300px;
+                }
+
+                /* Style the input field */
+                #searchInput {
+                    width: 100%;
+                    padding: 10px;
+                    box-sizing: border-box;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                }
+
+                /* Style the autocomplete items */
+                .autocomplete-items {
+                    position: absolute;
+                    border: 1px solid #d4d4d4;
+                    border-bottom: none;
+                    border-top: none;
+                    z-index: 99;
+                    top: 100%;
+                    left: 0;
+                    right: 0;
+                }
+
+                /* Style each item */
+                .autocomplete-items div {
+                    padding: 10px;
+                    cursor: pointer;
+                    background-color: #fff;
+                    border-bottom: 1px solid #d4d4d4;
+                }
+
+                /* Style when hovering over an item */
+                .autocomplete-items div:hover {
+                    background-color: #e9e9e9;
+                }
+
+                /* Style when an item is active */
+                .autocomplete-items .autocomplete-active {
+                    background-color: DodgerBlue !important;
+                    color: #fff;
+                }
+    </style>
+</head>
+<body>
+    
+    <div class="autocomplete-container">
+        <input type="text" id="searchInput" placeholder="Type to search...">
+        <div id="autocompleteList" class="autocomplete-items"></div>
+    </div>
+
+    <script>
+            document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('searchInput');
+            const autocompleteList = document.getElementById('autocompleteList');
+
+            const data = ['Apple', 'Banana', 'Orange', 'Grapes', 'Pineapple', 'Strawberry', 'Watermelon', 'Blueberry'];
+
+            searchInput.addEventListener('input', () => {
+                const query = searchInput.value.toLowerCase();
+                autocompleteList.innerHTML = '';
+
+                if (!query) {
+                    return false;
+                }
+
+                const filteredData = data.filter(item => item.toLowerCase().includes(query));
+
+                filteredData.forEach(item => {
+                    const div = document.createElement('div');
+                    div.textContent = item;
+
+                    div.addEventListener('click', () => {
+                        searchInput.value = item;
+                        autocompleteList.innerHTML = '';
+                    });
+
+                    autocompleteList.appendChild(div);
+                });
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!searchInput.contains(e.target) && !autocompleteList.contains(e.target)) {
+                    autocompleteList.innerHTML = '';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -167,6 +167,149 @@
   display: none;
 }
 
+
+/* Style the input field */
+
+
+/* Style the autocomplete items */
+.autocomplete-items {
+ 
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+
+}
+
+/* Style each item */
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+/* Style when hovering over an item */
+.autocomplete-items div:hover {
+  background-color: #e9e9e9;
+}
+
+/* Style when an item is active */
+.autocomplete-items .autocomplete-active {
+  background-color: DodgerBlue !important;
+  color: #fff;
+}
+
+
+.container {
+  box-shadow: 0 2px 7px #dfdfdf;
+    margin: 20px 10px 0px 10px;
+    background: white;
+  position: relative;
+  min-height: 350px;
+}
+
+/* Hide the images by default */
+.mySlides {
+   display: block;
+    width: 100%;
+    height: 350px;
+    
+}
+
+.mySlides img {
+  object-fit: contain;
+  
+  width: 100%;
+  
+  height: 350px;
+
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 8px;
+    margin-top: -50px;
+    color: #808080;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 10px;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #1523c1;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+  width: 50px;
+  margin: 10px 5px 5px 5px;
+}
+
+/* Add a transparency effect for thumnbail images */
+
+
+.cursor {
+  opacity: 0.6;
+  height: 60px;
+  cursor: pointer;
+  object-fit: contain;
+  
+  border-radius: 5px;
+  border: 0.5px solid  #1523c1;;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+
+
 @media only screen and (max-width: 910px) {
 
   
@@ -187,7 +330,9 @@
   .product-details p a {
     font-weight: 500;
     font-size: 12px;
-}
+  }
+
+  
 
 }
 
@@ -215,9 +360,7 @@
     float: left;
   }
 }
-   
 
-  
 
 
 @media only screen and (max-width: 413px) {
